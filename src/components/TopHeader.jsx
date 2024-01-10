@@ -7,7 +7,7 @@ const TopHeader = () => {
   return (
     <div className="bg-black text-white h-12 flex justify-between items-center md:pr-[135px] sm:pr-[44px] pr-[12px] text-sm">
       <div></div>
-      <div className=" text-[#D9D9D9]">
+      <div className=" text-[#d9d9d9]">
         Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!{" "}
         <span className="ml-2 text-white underline font-semibold">
           <Link>ShopNow</Link>
