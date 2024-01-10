@@ -3,6 +3,7 @@ import Items from "../components/Items";
 import HeaderAD from "../components/HeaderAD";
 import FlashSales from "../components/FlashSales";
 import Categories from "../components/Categories";
+import BestSelling from "../components/BestSelling";
 import { styles } from "../styles";
 
 const Home = () => {
@@ -25,6 +26,10 @@ const Home = () => {
       {/* section 3 Categories */}
       <div className="mt-[80px]">
         <Categories />
+      </div>
+      {/* section 4 Best selling */}
+      <div className="mt-[70px]">
+        <BestSelling />
       </div>
     </div>
   );
