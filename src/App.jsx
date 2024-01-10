@@ -11,6 +11,15 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
+      <div className="flex flex-col space-y-4 mt-4">
+        <h4>Electronics</h4>
+        <h4>Electronics</h4>
+        <h4>Electronics</h4>
+        <h4>Electronics</h4>
+        <h4>Electronics</h4>
+        <h4>Electronics</h4>
+        <h4>Electronics</h4>
+      </div>
     </div>
   );
 }

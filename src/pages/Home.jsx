@@ -2,6 +2,7 @@ import React from "react";
 import Items from "../components/Items";
 import HeaderAD from "../components/HeaderAD";
 import FlashSales from "../components/FlashSales";
+import Categories from "../components/Categories";
 import { styles } from "../styles";
 
 const Home = () => {
@@ -20,6 +21,10 @@ const Home = () => {
       {/* section 2 Flash Sales */}
       <div className=" mt-[138px]">
         <FlashSales />
+      </div>
+      {/* section 3 Categories */}
+      <div className="mt-[80px]">
+        <Categories />
       </div>
     </div>
   );
