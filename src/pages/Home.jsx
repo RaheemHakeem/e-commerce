@@ -5,6 +5,7 @@ import FlashSales from "../components/FlashSales";
 import Categories from "../components/Categories";
 import BestSelling from "../components/BestSelling";
 import SecondAD from "../components/SecondAD/SecondAD";
+import ExploreProducts from "../components/ExploreProducts";
 import { styles } from "../styles";
 
 const Home = () => {
@@ -35,6 +36,10 @@ const Home = () => {
       {/* section 5 secondAD */}
       <div className="mt-[140px]">
         <SecondAD />
+      </div>
+      {/* section 6 Exploring Products */}
+      <div className="mt-[70px]">
+        <ExploreProducts />
       </div>
     </div>
   );
