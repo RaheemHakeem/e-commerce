@@ -6,6 +6,7 @@ import Categories from "../components/Categories";
 import BestSelling from "../components/BestSelling";
 import SecondAD from "../components/SecondAD/SecondAD";
 import ExploreProducts from "../components/ExploreProducts";
+import NewArrival from "../components/NewArrival";
 import { styles } from "../styles";
 
 const Home = () => {
@@ -40,6 +41,10 @@ const Home = () => {
       {/* section 6 Exploring Products */}
       <div className="mt-[70px]">
         <ExploreProducts />
+      </div>
+      {/* section 7 new arrival */}
+      <div className="mt-[80px]">
+        <NewArrival />
       </div>
     </div>
   );

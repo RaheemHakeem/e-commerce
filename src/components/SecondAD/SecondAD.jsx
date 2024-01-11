@@ -7,8 +7,8 @@ const SecondAD = () => {
     <div className="jbl_img text-white flex py-[70px] ">
       <div className=" ml-[56px]">
         <h2 className="text-base text-[#00ff66] mb-8">Categories</h2>
-        <h1 className="text-5xl font-semibold flex flex-col mb-11">
-          Enhance Your <span>Music Experience</span>
+        <h1 className="text-5xl font-semibold mb-11">
+          Enhance Your <br />Music Experience
         </h1>
         <div className="flex justify-between max-w-80 mb-10">
           <div className=" bg-white text-black rounded-full w-[62px] h-[62px] flex flex-col justify-center items-center">

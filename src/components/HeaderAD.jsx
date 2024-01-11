@@ -6,7 +6,7 @@ import hero_endframe from "../assets/hero_endframe.png";
 const HeaderAD = () => {
   return (
     <div className="mt-10 ml-6">
-      <div className="bg-black h-[344px] w-full text-white">
+      <div className="bg-black h-full w-full text-white">
         <div className="flex justify-between pl-16">
           <div className=" pt-[58px] flex flex-col space-y-5">
             <div className="flex items-center">
@@ -15,10 +15,10 @@ const HeaderAD = () => {
                 iPhone 14 Series
               </p>
             </div>
-            <h1 className=" text-5xl font-semibold">Up to 10% off Voucher</h1>
+            <h1 className=" text-5xl font-semibold">Up to 10% <br /> off Voucher</h1>
             <Link>
               <div className="flex items-center">
-                <div>
+                <div >
                   <h3 className="text-[16px]">Shop Now</h3>
                   <hr />
                 </div>
@@ -33,7 +33,7 @@ const HeaderAD = () => {
           </div>
         </div>
         {/* buttons */}
-        <div className="flex justify-center items-center pt-4 gap-x-3">
+        <div className="flex justify-center items-center pb-4 gap-x-3">
             <button className="w-[10px] h-[10px] bg-slate-400 rounded-full"></button>
             <button className="w-[10px] h-[10px] bg-slate-400 rounded-full"></button>
             <button className="w-[10px] h-[10px] bg-slate-400 rounded-full"></button>
@@ -41,7 +41,6 @@ const HeaderAD = () => {
             <button className="w-[10px] h-[10px] bg-slate-400 rounded-full"></button>
         </div>
       </div>
-      <div></div>
     </div>
   );
 };

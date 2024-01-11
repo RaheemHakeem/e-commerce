@@ -3,7 +3,7 @@ import { FaChevronRight } from "react-icons/fa6";
 
 const Items = () => {
   return (
-    <div className=" pt-10 w-52">
+    <div className=" pt-10 w-52 h-full">
       {/* subcategory */}
       <div className="flex flex-col space-y-4">
         <div className="flex items-center justify-between">
