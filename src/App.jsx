@@ -2,6 +2,7 @@ import { useLocation, Route, Routes } from "react-router-dom";
 import TopHeader from "./components/TopHeader";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -11,15 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
-      <div className="flex flex-col space-y-4 mt-4">
-        <h4>Electronics</h4>
-        <h4>Electronics</h4>
-        <h4>Electronics</h4>
-        <h4>Electronics</h4>
-        <h4>Electronics</h4>
-        <h4>Electronics</h4>
-        <h4>Electronics</h4>
-      </div>
+      <Footer />
     </div>
   );
 }
