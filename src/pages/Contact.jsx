@@ -30,7 +30,9 @@ const Contact = () => {
             </div>
             <h1 className="text-base font-semibold">Write Us</h1>
           </div>
-          <p className="text-sm mb-2">Fill out the form and we would contact you within 24 hours</p>
+          <p className="text-sm mb-2">
+            Fill out the form and we would contact you within 24 hours
+          </p>
           <p className="text-sm">Email: raheemhakeem25@gmail.com</p>
         </div>
         {/* form */}
@@ -61,10 +63,9 @@ const Contact = () => {
           </div>
           <div className="flex justify-end">
             <button className="w-[215px] h-[56px] bg-[#db4444] rounded text-white text-base">
-            Send Message
-          </button>
+              Send Message
+            </button>
           </div>
-          
         </form>
       </div>
     </div>
