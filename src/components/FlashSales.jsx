@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { IoMdArrowForward, IoMdArrowBack } from "react-icons/io";
 import { CiHeart } from "react-icons/ci";
 import { PiEyeThin } from "react-icons/pi";
@@ -6,6 +6,59 @@ import chair from "../assets/chair.png";
 import gamepad from "../assets/gamepad.png";
 
 const FlashSales = () => {
+  const [timerDays, setTimerDays] = useState("00");
+  const [timerHours, setTimerHours] = useState("00");
+  const [timerMinutes, setTimerMinutes] = useState("00");
+  const [timerSeconds, setTimerSeconds] = useState("00");
+
+  // Timer
+  useEffect(() => {
+    const futureDate = new Date('March 31, 2024').getTime();
+    const interval = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = futureDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      let dayString = days.toString();
+      let hourString = hours.toString();
+      let minuteString = minutes.toString();
+      let secondString = seconds.toString();
+
+      if (dayString.length === 1) {
+        dayString = "0" + dayString;
+      }
+      if (hourString.length === 1) {
+        hourString = "0" + hourString;
+      }
+      if (minuteString.length === 1) {
+        minuteString = "0" + minuteString;
+      }
+      if (secondString.length === 1) {
+        secondString = "0" + secondString;
+      }
+
+      if (distance < 0) {
+        // stop timer
+        clearInterval(interval);
+      } else {
+        // update timer
+        setTimerDays(dayString);
+        setTimerHours(hourString);
+        setTimerMinutes(minuteString);
+        setTimerSeconds(secondString);
+      }
+    }, 1000);
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
   return (
     <div>
       <div className="flex items-center">
@@ -21,22 +74,22 @@ const FlashSales = () => {
           <div className="flex gap-2 items-center">
             <div className="flex flex-col justify-center items-center">
               <h3 className="text-xs font-bold">Days</h3>
-              <p className="text-3xl font-extrabold">03</p>
+              <p className="text-3xl font-extrabold">{timerDays}</p>
             </div>
             <p className="text-2xl font-bold text-[#db4444] pt-2">:</p>
             <div className="flex flex-col justify-center items-center">
               <h3 className="text-xs font-bold">Hours</h3>
-              <p className="text-3xl font-extrabold">23</p>
+              <p className="text-3xl font-extrabold">{timerHours}</p>
             </div>
             <p className="text-2xl font-bold text-[#db4444] pt-2">:</p>
             <div className="flex flex-col justify-center items-center">
               <h3 className="text-xs font-bold">Minutes</h3>
-              <p className="text-3xl font-extrabold">19</p>
+              <p className="text-3xl font-extrabold">{timerMinutes}</p>
             </div>
             <p className="text-2xl font-bold text-[#db4444] pt-2">:</p>
             <div className="flex flex-col justify-center items-center">
-              <h3 className="text-xs font-bold">Seconds</h3>
-              <p className="text-3xl font-extrabold">56</p>
+              <h3 className="text-xs font-bold">seconds</h3>
+              <p className="text-3xl font-extrabold">{timerSeconds}</p>
             </div>
           </div>
         </div>

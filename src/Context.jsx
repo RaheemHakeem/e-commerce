@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext, useEffect, useRef } from "react";
 import { lang } from "./data";
 
 const AppContext = React.createContext();
@@ -7,7 +7,7 @@ const AppProvider = ({ children }) => {
   const [isLanguageBarOpen, setIsLanguageBarOpen] = useState(false);
   const [language, setLanguage] = useState("English");
   const [langList, setLangList] = useState([]);
-
+  
   // language selector
   const openLanguageBar = () => {
     setIsLanguageBarOpen(true);
@@ -22,7 +22,7 @@ const AppProvider = ({ children }) => {
   useEffect(() => {
     const newLangList = lang.filter((item) => item.language !== language);
     setLangList(newLangList);
-    setIsLanguageBarOpen(false)
+    setIsLanguageBarOpen(false);
   }, [language]);
 
   return (
