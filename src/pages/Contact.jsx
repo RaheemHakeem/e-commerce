@@ -9,7 +9,7 @@ const Contact = () => {
       <div className="flex gap-2 text-sm mb-[80px]">
         <p className=" text-slate-500">Home</p>
         <span className=" text-slate-500">/</span>
-        <p>About</p>
+        <p>Contact</p>
       </div>
 
       <div className="flex gap-x-[30px] my-10">

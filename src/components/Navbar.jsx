@@ -14,9 +14,9 @@ const Navbar = () => {
         <h2 className=" text-2xl font-bold">Exclusive</h2>
 
         <ul className="flex space-x-12 text-base font-normal">
-          <Link>Home</Link>
-          <Link>Contact</Link>
-          <Link>About</Link>
+          <Link to={'/'}>Home</Link>
+          <Link to={'contact'}>Contact</Link>
+          <Link to={'about'}>About</Link>
           <Link>Sign Up</Link>
         </ul>
 
