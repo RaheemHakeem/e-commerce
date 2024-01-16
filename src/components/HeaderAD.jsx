@@ -64,6 +64,14 @@ const data = [
 
 const HeaderAD = () => {
   const [index, setIndex] = useState(2);
+  const [cusorOver, setCusorOver] = useState(false);
+
+  let slider;
+  const startSlider = () => {
+    slider = setInterval(() => {
+      setIndex(index + 1);
+    }, 3000);
+  };
 
   useEffect(() => {
     const lastIndex = data.length - 1;
@@ -73,17 +81,27 @@ const HeaderAD = () => {
     if (index > lastIndex) {
       setIndex(0);
     }
-  }, [index, data]);
+    if (!cusorOver) {
+      startSlider();
+    }
 
-  useEffect(() => {
-    let slider = setInterval(() => {
-      setIndex(index + 1);
-    }, 3000);
     return () => clearInterval(slider);
-  }, [index]);
+  }, [index, data, cusorOver]);
+
+  const handleMouseEnter = () => {
+    setCusorOver(true);
+  };
+
+  const handleMouseLeave = () => {
+    setCusorOver(false);
+  };
 
   return (
-    <div className="mt-10 ml-6">
+    <div
+      className="mt-10 ml-6"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       {data.map((item) => {
         let display = "hidden";
         if (item.id === index) {
@@ -132,6 +150,7 @@ const HeaderAD = () => {
                   <button
                     className={`w-[10px] h-[10px] ${active} rounded-full`}
                     onClick={() => setIndex(item.id)}
+                    key={item.id}
                   ></button>
                 );
               })}
