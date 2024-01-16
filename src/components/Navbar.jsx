@@ -17,7 +17,7 @@ const Navbar = () => {
           <Link to={'/'}>Home</Link>
           <Link to={'contact'}>Contact</Link>
           <Link to={'about'}>About</Link>
-          <Link>Sign Up</Link>
+          <Link to={'signup'}>Sign Up</Link>
         </ul>
 
         <div className="flex space-x-7 justify-center items-center">

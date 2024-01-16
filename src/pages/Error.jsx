@@ -1,5 +1,6 @@
 import React from "react";
 import { styles } from "../styles";
+import { Link } from "react-router-dom";
 
 const Error = () => {
   return (
@@ -11,10 +12,12 @@ const Error = () => {
       </div>
       <div className="flex flex-col items-center">
         <h1 className="text-[110px] font-medium mb-[40px]">404 Not Found</h1>
-        <p className="text-base mb-[80px]">Page does not exist, Check the link and try again.</p>
-        <button className="w-[254px] h-[56px] bg-[#db4444] rounded text-white text-base">
+        <p className="text-base mb-[80px]">
+          Page does not exist, Check the link and try again.
+        </p>
+        <Link to={'/'} className="flex justify-center items-center w-[254px] h-[56px] bg-[#db4444] rounded text-white text-base">
           Back to home page
-        </button>
+        </Link>
       </div>
     </div>
   );
