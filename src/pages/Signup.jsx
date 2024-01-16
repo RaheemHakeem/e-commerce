@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 
 const Signup = () => {
   return (
-    <div className="mt-[60px] mb-[140px] mr-[135px] flex gap-x-[129px]">
-      <div className="">
+    <div className="mt-[60px] mb-[140px] mr-[135px] flex gap-x-[129px] justify-between">
+      <div className="max-w-[705px]">
         <img src={phonecart} alt="phonecart" />
       </div>
 
